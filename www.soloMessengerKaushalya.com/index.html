@@ -1,0 +1,429 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>solo-messenger</title>
+	<link rel="stylesheet" href="css/css.css">
+
+    <!-- Font Awesome -->
+<script src="https://use.fontawesome.com/9b85ec9ead.js"></script>
+    <!-- Bootstrap -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!--     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	  <script src="https://kit.fontawesome.com/938d7bb336.js" crossorigin="anonymous"></script>
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  
+  <style>
+  .tt{width:80px;}
+  
+  .ttw{width:95px;}
+  
+  
+  
+  #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+  </style>
+  </head>
+  <body class="templatemo-home">
+    <!-- Start of Navigation Bar -->
+   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-circle-up"></i> Top</button>
+    <!-- End of Navigation Bar -->
+
+    <!-- Site Title -->
+  	<div id="site-title">
+    <h1 style="color:white">Solo Messenger <h1>
+	<h3 style="color:white">- By Kaushalya -  <h3>
+	<h5 style="color:white">(Powered By: Google APIs With Family-ROBOT APIs.)
+    </div>
+
+    <!-- Chat Container -->
+    <div id="container">
+    <div id="main-container">
+        
+    </div>
+
+    <!-- Chat Controller -->
+    <div id="controller">
+    <textarea id="textbox" class="form-control" rows="2" placeholder="Enter your message here"></textarea>
+    <div class="checkbox"><label><input checked type="checkbox" id="enter"/>Send on enter</label>
+    <button id="send" class="btn btn-primary">Send</button>
+    </div>
+	
+    </div>
+	
+
+	<center><button class=" btn-primary" id="open-modal"><i class="fas fa-microphone-alt"></i> voice</a></button></center>
+      </div>
+	  
+	  <div style="margin:25px">
+	  <div id="myModal" class="modal">
+  
+  <!-- Modal content -->
+  <div id="modal-content" class="modal-content animation-1" >
+      <!-- Modal header -->
+    <header class="modal-header">
+      <p class="modal-header-title">
+       Solo-Messenger
+      </p>
+      <button id="close" class="modal-header-icon">
+        <span class="icon">
+          <i class='bx bx-x'></i>
+        </span>
+      </button>
+    </header>
+    <!-- Modal body -->
+    <div class="modal-body">
+      <p>function for voice `if(processVoiceMessage.indexOf("voice") >=0){var voiceM = voiceM.getVoice();
+		bReply();}` is currently unavailable</p>
+    </div>
+   
+    <!-- Modal footer -->
+    <footer class="modal-footer">
+      
+    </footer>
+  </div>
+  
+</div>
+	  <hr>
+	 
+	  <h2 style="color:white">Keywords</h2><h4 style="color:white">Try to say....</h4> 
+<hr>
+<center><h3 style="color:white">Greeting</h3>
+
+<table>
+<td>
+
+<input type="text" readonly value="hello"id="fname" name="fname" class="tt">
+</td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="hi"id="fname" name="fname" class="tt">
+</td></td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="hey"id="fname" name="fname" class="tt">
+</td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="bye"id="fname" name="fname" class="tt">
+</td></table>
+<br><hr>
+<h3 style="color:white">Questions</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="why"id="fname" name="fname" class="tt">
+</td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="so"id="fname" name="fname" class="tt">
+</td></td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="really"id="fname" name="fname" class="tt">
+</td></tr>
+
+<tr>
+<td><input type="text" readonly value="what"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="which one"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="were"id="fname" name="fname" class="tt"></td>
+
+</tr>
+<tr>
+<td><input type="text" readonly value="at what time"id="fname" name="fname" class="ttw"></td>
+
+</tr>
+</table>
+<br><hr>
+<h3 style="color:white">Problems</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="how are you"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="what do you learn"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="what do you know"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="can you sing"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="can you eat"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="can you track my phone"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+</table>
+<br>
+<hr>
+
+<h3 style="color:white">Commands</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="let's play"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="sing a song"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="let's eat something"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="let's sing a song"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="about you"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="tell me about you"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="you?"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="you"id="fname" name="fname" class="">
+
+</td>
+</tr><tr><td>
+<input type="text" readonly value="track my phone"id="fname" name="fname" class="">
+
+</td>
+</tr>
+</table>
+<br><hr>
+
+<h3 style="color:white">About Me</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="what did you learn"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="how about your memory"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+
+</table>
+
+
+<br><hr>
+
+
+<h3 style="color:white">Tracking and Opening</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="track my phone"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="can you track my phone"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="open youtube"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="open instagram"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="open map"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="open facebook"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="my location"id="fname" name="fname" class="">
+
+</td>
+</tr>
+<tr><td>
+<input type="text" readonly value="time"id="fname" name="fname" class="">
+
+</td>
+</tr><tr><td>
+<input type="text" readonly value="make a call"id="fname" name="fname" class="">
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+<hr>
+<h3 style="color:white">About Me</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="what did you learn"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="how about your memory"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+
+</table>
+
+
+
+<hr>
+
+<h3 style="color:white">Tell Me A Story</h3>
+<table><tr>
+<td>
+
+<input type="text" readonly value="tell me a story"id="fname" name="fname" class="">
+</tr>
+<tr><td>
+<input type="text" readonly value="tell me a funny story"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+<tr><td>
+<input type="text" readonly value="make me happy"id="fname" name="fname" class="">
+
+</td>
+</tr>
+
+</table>
+<hr>
+
+<h3 style="color:white">Other</h3>
+
+<table><tr>
+<td>
+
+<input type="text" readonly value="thanks"id="fname" name="fname" class="tt">
+</td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="thank you"id="fname" name="fname" class="tt">
+</td></td><td><h6 style="color:#0000">...</h6></td><td>
+<input type="text" readonly value="ok"id="fname" name="fname" class="tt"></td>
+</tr>
+
+<tr>
+<td><input type="text" readonly value="yes"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="yep"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="okay"id="fname" name="fname" class="tt"></td><h6 style="color:#0000">...</h6></td>
+
+</tr>
+<tr>
+<input type="text" readonly value="thank you very much"id="fname" name="fname" class="">
+
+</tr>
+
+<tr>
+<td><input type="text" readonly value="lol"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="lmao"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="haha"id="fname" name="fname" class="tt"></td><h6 style="color:#0000">...</h6></td>
+
+</tr>
+
+<tr>
+<td><input type="text" readonly value="no"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="nop"id="fname" name="fname" class="tt"></td><td><h6 style="color:#0000">...</h6></td>
+<td><input type="text" readonly value="nah"id="fname" name="fname" class="tt"></td><h6 style="color:#0000">...</h6></td>
+
+</tr>
+</table>
+
+<br><hr>
+</center>
+	  </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+	<script src="js/js.js"></script>
+	<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+ </body>
+</html>

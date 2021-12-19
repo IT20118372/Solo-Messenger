@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.navbar {
+	border: none;
+	font-family: 'Roboto', sans-serif;
+}
+
+#site-title {
+	padding-top: 0px;
+	width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+	margin: 0;
+    background-color: rgb(238, 238, 238);
+    font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+  height: 800px;
+}
+
+.templatemo-home {
+  background: url('../photo.jfif');
+  background-size: cover;
+ background-attachment: fixed;
+  background-position: center center;
+}
+ 
+
+#container {
+	width: 360px;
+	height: 530px;
+	overflow-y: auto;
+    margin: 0px auto;
+    background-color: #DE8B04 ;
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+	box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+}
+
+#main-container {
+	width: 320px;
+	height: 350px;
+	overflow-y: auto;
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px 20px 10px 20px;
+    color: #000;
+}
+
+#controller {
+	width: 320px;
+	height: 100px;
+  margin: 0px auto;
+  margin-top: 7px;
+}
+
+.form-control {
+	border: none;
+}
+
+textarea {
+	margin-top: 7px;
+	resize: none;
+}
+
+#send {
+	float: right;
+}
+
+.gif-container {
+	max-width: 150px;
+	height: 100px; 
+    border-radius: 4px;
+	display: flex;
+	float: left;
+}
+
+.bubble {
+    margin-top: 5px;
+    width: 75%;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.user-input {
+    float: right;
+    background-color: #1289fe;
+    color: #fff;
+}
+
+.bot-output {
+    float: left;
+    background-color: #e5e5ea;}
+    color: #000;
+}
+
+
+
+
+
+
+.tm-view-more-btn {
+ 
+   background: #ffffff;
+  color: #eb5424;
+  border-radius: 25px;
+  
+  -webkit-transition: all 0.6s ease-in;
+          transition: all 0.6s ease-in;
+}
+.tm-view-more-btn:hover {
+ 
+ background: 	black;
+  color: #ffffff;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display:none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  top:50%;
+  left:50%;
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+  border-radius:10px;
+  border: 1px solid #ccc;
+  width: 80%; /* Could be more or less, depending on screen size */
+  transform: translate(-50% , -50%);
+}
+
+.modal-header{
+  align-items: stretch;
+  box-shadow: 0 1px 1px rgb(10 10 10 / 10%);
+  display: flex;
+}
+
+.modal-header-title{
+  align-items: center;
+  color: #363636;
+  display: flex;
+  flex-grow: 1;
+  font-weight: 700;
+  padding: 5px 15px;
+}
+.modal-header-icon{
+
+    background: 0 0;
+    border: none;
+    color: currentColor;
+    font-family: inherit;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+}
+
+#modal-content.animation-1{
+  animation: animation-1 0.5s forwards;
+}
+.modal-body{
+  padding: 5px 15px;
+}
+@keyframes animation-1{
+  0% {
+    transform: translate(-50%,-50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%,-50%) scale(1.2);
+  }
+  70% {
+    transform: translate(-50%,-50%) scale(0.9);
+  }
+  100% {
+    transform: translate(-50%,-50%) scale(1);
+  }
+}
+
+
+.text-wrap {
+  position: relative;
+  background-color: #eee;
+  
+width:10%;
+}
+
+textarea {
+	margin-top: 7px;
+	resize: none;
+}
+textarea::-webkit-scrollbar {
+    width: 4px;
+}
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+textarea::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.clipboard.icon {
+  position: relative;
+    top: 2.3em;
+    right: 2.5em;
+  margin-top: 4px;
+  margin-left: 4px;
+  width: 11px;
+  height: 13px;
+  border: solid 1px #333333;
+  border-top: none;
+  border-radius: 1px; 
+  cursor: pointer;
+}
+.clipboard.icon:before {
+  top: -1px;
+  left: 2px;
+  width: 5px;
+  height: 1px;
+  border: solid 1px #333333;
+  border-radius: 1px; 
+}
+.clipboard.icon:after {
+  width: 3px;
+  height: 1px;
+  background-color: #333333;
+  box-shadow: 8px 0 0 0 #333333; 
+}
+
+.icon:before, .icon:after {
+  content: '';
+  position: absolute;
+  display: block;
+}
+
+.padding-table-columns td
+{
+    padding:0 25px 0 0; /* Only right padding*/
+}
